@@ -1,0 +1,54 @@
+public class ExerciciosWhile{
+
+    public void imprimir1A100(){
+        int i =0;
+        while(i < 100){
+            ++i;
+            System.out.println(i);
+        }
+    }
+    public void imprimirImpar1a100(){
+        int i =0;   
+        while(i < 100){
+            ++i;
+            if ( i %2 !=0)
+                System.out.println(i);    
+     }
+    }
+    public void entreValores(int inicio , int fim){
+        int cont = ++inicio;
+        while(cont < fim){
+            System.out.println(cont++);
+        }
+    }
+    public void imprimirEntre0Ex(int x){
+        int cont =0;
+        if( x < 0)
+            System.out.println("Número negativo, tem de ser maior que 0");
+        else
+            while (cont < x)
+            System.out.println(cont++);
+    }
+    public void chegarA0(int x){
+        if( x < 0){
+            while (x <= 0){
+                System.out.println(x++);
+            }
+        }
+        else{
+            while (x >= 0){
+                System.out.println(x--);
+            }
+        }
+    }
+    public boolean eprimo(int x){
+        boolean primo = true;
+        int cont = 2;    
+        while(cont < x){
+            if(x % cont++ == 0)
+                primo = false;
+
+        }
+        return primo;
+    }
+}
