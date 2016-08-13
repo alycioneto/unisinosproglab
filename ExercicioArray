@@ -1,0 +1,111 @@
+
+import java.util.Iterator;
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author Unisinos
+ */
+public class ExercicioArray {
+    int array[][];
+    
+    public int[][] exercicio1A(){
+        array = new int[3][10];
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[i].length; j++) {
+                array[i][j] = j;
+            }
+        }
+        return array;
+    }
+    public int[][] exercicio1B(){
+        array = new int[5][10];
+        for (int[] array1 : array) {
+            for (int j = 0; j < array1.length; j++) {
+                array1[j] = j * j;
+            }
+        }
+        return array;
+    }
+    
+    public int[][] exercicio1C(){
+        array = new int[6][6];
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[i].length; j++) {
+                array[i][j] = i;
+            }
+        }
+        return array;
+    }
+    
+    public int[][] exercicio1D(){
+        array = new int[9][6];
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[i].length; j++) {
+                if (i % 2 == 0) array[i][j] = -1;
+                else array[i][j] = 0;
+            }
+        }
+        return array;
+    }
+    
+    public int[][] exercicio2(){
+        int tamanhoArray = (int)(Math.random() * (5-0) + 0);
+        array = new int[tamanhoArray][tamanhoArray];
+        for (int[] array1 : array) {
+            for (int j = 0; j < array1.length; j++) {
+                array1[j] = (int)(Math.random() * (100-0) + 0);
+            }
+        }
+        return array;
+    }
+    
+    public void exercicio7(double arrayDouble[][]){
+        double maiorNumero = arrayDouble[0][0];
+        for (double[] array1 : arrayDouble) {
+            for (int j = 0; j < array1.length; j++) {
+                if (array1[j] > maiorNumero) {
+                    maiorNumero=array1[j];
+                }
+            }
+        }
+        System.out.println(maiorNumero);
+    }
+    
+    
+    
+    
+    
+       public double[][] geraArrayDouble(){
+        int tamanhoArray = (int)(Math.random() * (5-0) + 0);
+        double arrayDouble[][] = new double[tamanhoArray][tamanhoArray];
+        for (double[] array1 : arrayDouble) {
+            for (int j = 0; j < array1.length; j++) {
+                array1[j] = (double)(Math.random() * (100-0) + 0);
+            }
+        }
+        return arrayDouble;
+    }
+    
+    public void imprimeArray(int array[][]){
+        for (int[] array1 : array) {
+            for (int j = 0; j < array1.length; j++) {
+                System.out.print(array1[j] + " ");
+            }
+            System.out.println();
+        }
+    }
+    public void imprimeArrayDouble(double array[][]){
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[i].length; j++) {
+                System.out.print(array[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
